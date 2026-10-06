@@ -1,0 +1,5 @@
+- insert:
+    - id: local-session-quadrants
+      name: '@local/dsh-session-quadrants'
+      config:
+        marks: {}

@@ -1,0 +1,22 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+
+# DSH runtime data (not plugin source)
+.dsh/
+.plugin-manager/
+
+# Generated artifacts and operating-system files
+coverage/
+*.log
+*.tgz
+.DS_Store
+Thumbs.db

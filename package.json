@@ -1,0 +1,24 @@
+{
+  "name": "@local/dsh-session-quadrants",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Persistent, user-selectable Eisenhower quadrant colors for workspace sessions.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": ["index.js", "operations.js", "client.js", "cordis.patch.yml", "locale", "README.md"],
+  "dependencies": { "@deepseek-ai/schemastery": "3.18.4" },
+  "peerDependencies": { "@deepseek-ai/dsh": "0.2.0-rc.2" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-workspace", "@deepseek-ai/dsh-client-locale", "@deepseek-ai/dsh-api-remotes"]
+    }
+  }
+}
